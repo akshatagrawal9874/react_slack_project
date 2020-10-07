@@ -5,7 +5,8 @@ import { createOrGetUserProfileDocument } from '../firebase';
 const initialUserState = { user: null, loading: true };
 export const UserContext = createContext(initialUserState);
 
-class UserProvider extends Component {
+class UserProvider extends Component 
+{
   state = initialUserState;
 
   componentDidMount = async () => {

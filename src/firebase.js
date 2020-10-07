@@ -2,7 +2,8 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
 //delete the firebase.ps1 file for removing the error
-const firebaseConfig = {
+const firebaseConfig =
+{
   apiKey: "AIzaSyA9kJCKjx-Fq2s--RAsz-xY6wI-H-EkDIo",
   authDomain: "react-slack-clone-b87ba.firebaseapp.com",
   databaseURL: "https://react-slack-clone-b87ba.firebaseio.com",

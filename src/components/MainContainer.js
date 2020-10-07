@@ -12,7 +12,7 @@ function MainContainer(props) {
     firestore
       .collection('messages')
       .where('channel', '==', channel.id)
-      // .orderBy('created_at', 'asc')
+      .orderBy('created_at', 'asc')
       .get()
       .then((snapshot) => {
         // const channels = snapshot.docs;
@@ -41,6 +41,7 @@ function MainContainer(props) {
         from: {
           id: auth.currentUser.uid,
           name: auth.currentUser.displayName,
+          photoURL:auth.currentUser.photoURL
         },
         text: userMessage,
         channel: channel.id,
@@ -68,14 +69,14 @@ function MainContainer(props) {
           <div className="message" key={message.id}>
             <div className="left-block">
               <img
-                src="https://ca.slack-edge.com/T0188513NTW-U01867WD8GK-ga631e27835b-72"
+                src={message.from.photoURL}
                 alt="pic"
               />
             </div>
             <div className="right-block">
               <div className="user">
                 <div>{message.from.name}</div>
-                <span>1:21 PM</span>
+                <span>Developer</span>
               </div>
               <div className="user-message">{message.text}</div>
             </div>
