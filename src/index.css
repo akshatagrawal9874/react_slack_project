@@ -15,13 +15,12 @@ code {
     monospace;
 }
 .signin-form {
-  /* border: 1px solid #e1e1e1; */
-  padding: 20px 20px;
-  padding-top: 10px;
-  width: 400px;
-  margin: 0 auto;
-  margin-top: 20px;
+  padding: 200px 200px;
+  width: 450px;
+  height: 250px;
+  margin: 20px auto 0;
   border-radius: 3px;
+  align-content: center;
 }
 .signin-form h1 {
   margin: 15px 0;
